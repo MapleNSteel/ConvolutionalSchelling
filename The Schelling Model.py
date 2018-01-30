@@ -65,7 +65,7 @@ for iter in range(0,numIter):
 	repopulationGrid=populationGrid
 
 	if((iter%10)==0):
-		cv2.imwrite('iteration'+str(iter)+'.bmp', populationGrid*(2**8))
+		cv2.imwrite('iteration'+str(iter)+'.bmp', visualMap(populationGrid)*(2**8))
 	
 	numSatisfied=0
 	for i in range(0,numRows):
@@ -93,7 +93,7 @@ for iter in range(0,numIter):
 
 			populationGrid=repopulationGrid
 
-cv2.imwrite('iteration99.bmp', populationGrid*(2**8))
+cv2.imwrite('iteration99.bmp', visualMap(populationGrid)*(2**8))
 
 cv2.waitKey()
 cv2.destroyAllWindows()
